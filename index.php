@@ -10,7 +10,7 @@ $dotenv->safeLoad();
 
 // Инициализация клиента DeepSeek
 $client = new Client([
-    'base_uri' => 'https://api.deepseek.com', // URL API DeepSeek
+    'base_uri' => 'https://api.groq.com/openai', // URL API Grok
     'timeout'  => 30.0,
 ]);
 
@@ -55,7 +55,7 @@ if (empty($apiKey)) {
                 'Content-Type'  => 'application/json',
             ],
             'json' => [
-                'model' => 'deepseek-chat', // Указываем модель DeepSeek
+                'model' => 'llama-3.3-70b-versatile', // Указываем модель
                 'messages' => $formattedMessages,
                 'stream' => false // Потоковый вывод можно включить, если нужно
             ],
