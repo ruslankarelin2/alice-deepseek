@@ -33,7 +33,7 @@ function cleanRequest($request) {
 
 // Функция для взаимодействия с DeepSeek
 function askDeepSeek($message, $messages, $client) {
-    $apiKey = $_ENV['DEEPSEEK_API_KEY']; // Используем ключ DeepSeek
+    $apiKey = getenv('DEEPSEEK_API_KEY');// Используем ключ DeepSeek
     $allMessages = $messages;
     $allMessages[] = $message;
 
