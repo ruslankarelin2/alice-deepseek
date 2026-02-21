@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 // Загрузка переменных окружения
 $dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+$dotenv->safeLoad();
 
 // Инициализация клиента DeepSeek
 $client = new Client([
