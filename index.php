@@ -10,7 +10,7 @@ $dotenv->safeLoad();
 
 // Инициализация клиента DeepSeek
 $client = new Client([
-    'base_uri' => 'https://api.groq.com/openai', // URL API Grok
+    'base_uri' => 'https://api.groq.com', // URL API Grok
     'timeout'  => 30.0,
 ]);
 
@@ -49,7 +49,7 @@ if (empty($apiKey)) {
     }
 
     try {
-        $response = $client->post('/v1/chat/completions', [
+        $response = $client->post('/openai/v1/chat/completions', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $apiKey,
                 'Content-Type'  => 'application/json',
