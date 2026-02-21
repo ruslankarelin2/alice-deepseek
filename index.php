@@ -40,13 +40,18 @@ if (empty($apiKey)) {
     $allMessages = $messages;
     $allMessages[] = $message;
 
-    $formattedMessages = [];
-    foreach ($allMessages as $msg) {
-        $formattedMessages[] = [
-            "role" => "user",
-            "content" => $msg
-        ];
-    }
+$formattedMessages = [
+    [
+        "role" => "system",
+        "content" => "Отвечай кратко и по существу. Максимум 500 символов. Ты голосовой помощник, говори простым языком."
+    ]
+];
+foreach ($allMessages as $msg) {
+    $formattedMessages[] = [
+        "role" => "user",
+        "content" => $msg
+    ];
+}
 
     try {
         $response = $client->post('/openai/v1/chat/completions', [
@@ -94,9 +99,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userMessage = cleanRequest($input['request']['original_utterance']);
         $userState['messages'][] = $userMessage;
 
-        $botReply = askDeepSeek($userMessage, $userState['messages'], $client);
-        $response['response']['text'] = $botReply;
-        $response['response']['tts'] = $botReply . '<speaker audio="alice-sounds-things-door-2.opus">';
+$botReply = askDeepSeek($userMessage, $userState['messages'], $client);
+$botReply = mb_substr($botReply, 0, 900);
+$response['response']['text'] = $botReply;
+$response['response']['tts'] = $botReply . '<speaker audio="alice-sounds-things-door-2.opus">';
     } else {
         $response['response']['text'] = 'Я умный чат-бот. Спроси что-нибудь.';
         $response['response']['tts'] = 'Я умный чат-бот. Спроси что-нибудь.';
