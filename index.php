@@ -33,7 +33,10 @@ function cleanRequest($request) {
 
 // Функция для взаимодействия с DeepSeek
 function askDeepSeek($message, $messages, $client) {
-    $apiKey = getenv('DEEPSEEK_API_KEY');// Используем ключ DeepSeek
+    $apiKey = getenv('DEEPSEEK_API_KEY');
+if (empty($apiKey)) {
+    return 'API ключ не найден. Проверьте переменную DEEPSEEK_API_KEY.';
+}// Используем ключ DeepSeek
     $allMessages = $messages;
     $allMessages[] = $message;
 
@@ -60,10 +63,10 @@ function askDeepSeek($message, $messages, $client) {
 
         $body = json_decode($response->getBody(), true);
         return trim($body['choices'][0]['message']['content']);
-    } catch (Exception $e) {
-        error_log($e->getMessage());
-        return 'Не удалось получить ответ от сервиса.';
-    }
+} catch (Exception $e) {
+    error_log($e->getMessage());
+    return 'Ошибка: ' . $e->getMessage();
+}
 }
 
 // Обработка POST-запроса
