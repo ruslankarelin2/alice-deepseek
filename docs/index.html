@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Восемь альтернатив Linear для задач, проектов и команд. Найдите подходящий инструмент по вашему стилю работы."
+    />
+    <meta name="theme-color" content="#f6f7f2" />
+    <title>Вместо Linear — инструменты для вашей команды</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Перейти к каталогу</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="#" aria-label="Вместо — на главную"
+        ><span class="brand-mark" aria-hidden="true">↗</span> вместо<span
+          class="wordmark-dot"
+          >.</span
+        ></a
+      >
+      <nav aria-label="Основная навигация">
+        <a href="#catalog">Каталог <span>08</span></a
+        ><a href="#guide">Как выбрать <span aria-hidden="true">↗</span></a>
+      </nav>
+      <span class="header-note"
+        ><i aria-hidden="true"></i> Меньше хаоса. Больше дела.</span
+      >
+    </header>
+    <main>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span aria-hidden="true">✳</span> ГИД ПО РАБОЧИМ ИНСТРУМЕНТАМ
+          </p>
+          <h1 id="hero-title">У задач есть<br /><em>альтернативы.</em></h1>
+          <p class="hero-description">
+            Linear — хороший выбор. Но не единственный.<br />Собрали
+            инструменты, в которых вашей команде<br class="desktop-break" />
+            может быть удобнее работать.
+          </p>
+          <a class="primary-link" href="#catalog"
+            >Найти свой инструмент <span aria-hidden="true">↘</span></a
+          >
+          <div class="hero-meta">
+            <span><strong>08</strong> альтернатив</span
+            ><span><strong>04</strong> подхода к работе</span
+            ><span>Без рейтингов и рекламы</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="art-caption">ВАША КОМАНДА. ВАШ РИТМ.</span>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <span class="art-spark">✳</span><span class="small-spark">+</span>
+          <div class="mini-card mini-back">
+            <span class="mini-icon">▥</span>
+            <div>
+              <b>Планировать проще</b><small>От идеи к понятному плану</small>
+            </div>
+            <span class="mini-check">✓</span>
+          </div>
+          <div class="mini-card mini-front">
+            <div class="mini-card-top">
+              <span class="mini-label"><i></i> В РАБОТЕ</span><span>•••</span>
+            </div>
+            <b>Найти свой способ работать</b>
+            <div class="mini-progress"><span></span></div>
+            <div class="mini-card-bottom">
+              <span>Меньше процессов, больше смысла</span
+              ><span class="avatar">вы</span>
+            </div>
+          </div>
+          <span class="art-sticker"
+            >Всё начинается<br />с хорошего выбора <span>↗</span></span
+          >
+        </div>
+      </section>
+      <section
+        id="catalog"
+        class="catalog wrap"
+        aria-labelledby="catalog-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ИНСТРУМЕНТЫ ПОД ВАШИ ЗАДАЧИ</p>
+            <h2 id="catalog-title">
+              Другой инструмент.<br class="mobile-break" />
+              Тот же фокус.
+            </h2>
+          </div>
+          <p>
+            От простых досок до больших систем.<br />Выбирайте то, что подходит
+            вам.
+          </p>
+        </div>
+        <div class="catalog-controls" hidden>
+          <div
+            class="filters"
+            role="group"
+            aria-label="Фильтр по типу инструмента"
+          >
+            <button
+              class="filter active"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              Все <span>8</span>
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="development"
+              aria-pressed="false"
+            >
+              Разработка
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="projects"
+              aria-pressed="false"
+            >
+              Проекты
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="boards"
+              aria-pressed="false"
+            >
+              Канбан
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="workspace"
+              aria-pressed="false"
+            >
+              Рабочее пространство
+            </button>
+          </div>
+          <label class="search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Найти инструмент"
+              aria-label="Поиск инструментов"
+              autocomplete="off"
+          /></label>
+        </div>
+        <p
+          id="result-count"
+          class="result-count"
+          role="status"
+          aria-live="polite"
+        >
+          8 инструментов для вашего следующего проекта
+        </p>
+        <div class="card-grid">
+          <article class="tool-card" data-category="development">
+            <div class="card-top">
+              <span class="tool-icon jira" aria-hidden="true">◆</span
+              ><span class="tag">Разработка</span>
+            </div>
+            <h3>Jira</h3>
+            <p class="tool-description">
+              Гибкие процессы для команд разработки. Бэклог, спринты и отчёты,
+              когда нужен контроль над деталями.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Сложных процессов и больших команд
+            </p>
+            <a
+              class="tool-link"
+              href="https://www.atlassian.com/software/jira"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт Jira (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="projects">
+            <div class="card-top">
+              <span class="tool-icon asana" aria-hidden="true">∴</span
+              ><span class="tag">Проекты</span>
+            </div>
+            <h3>Asana</h3>
+            <p class="tool-description">
+              Задачи, сроки и цели в одном месте. Помогает видеть, кто чем занят
+              и как движется общий проект.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Совместной работы разных отделов
+            </p>
+            <a
+              class="tool-link"
+              href="https://asana.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт Asana (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="projects">
+            <div class="card-top">
+              <span class="tool-icon clickup" aria-hidden="true">⌃</span
+              ><span class="tag">Проекты</span>
+            </div>
+            <h3>ClickUp</h3>
+            <p class="tool-description">
+              Задачи, документы и цели с разными видами: от списка до доски.
+              Много возможностей для настройки под себя.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Команд, которым нужен единый центр работы
+            </p>
+            <a
+              class="tool-link"
+              href="https://clickup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт ClickUp (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="boards">
+            <div class="card-top">
+              <span class="tool-icon trello" aria-hidden="true">▥</span
+              ><span class="tag">Канбан</span>
+            </div>
+            <h3>Trello</h3>
+            <p class="tool-description">
+              Понятные доски с карточками и списками. Легко начать, распределить
+              задачи и увидеть прогресс без долгой настройки.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Небольших команд и простых процессов
+            </p>
+            <a
+              class="tool-link"
+              href="https://trello.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт Trello (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="workspace">
+            <div class="card-top">
+              <span class="tool-icon notion" aria-hidden="true">N</span
+              ><span class="tag">Рабочее пространство</span>
+            </div>
+            <h3>Notion</h3>
+            <p class="tool-description">
+              Документы, база знаний и задачи рядом. Соберите собственную
+              систему работы из страниц, баз данных и шаблонов.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Команд, которые много работают с
+              контекстом
+            </p>
+            <a
+              class="tool-link"
+              href="https://www.notion.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт Notion (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="projects">
+            <div class="card-top">
+              <span class="tool-icon monday" aria-hidden="true">///</span
+              ><span class="tag">Проекты</span>
+            </div>
+            <h3>monday.com</h3>
+            <p class="tool-description">
+              Визуальные доски, автоматизации и дашборды. Помогает настроить
+              повторяющиеся процессы и следить за результатами.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Операционных и кросс-функциональных
+              команд
+            </p>
+            <a
+              class="tool-link"
+              href="https://monday.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт monday.com (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="development">
+            <div class="card-top">
+              <span class="tool-icon youtrack" aria-hidden="true">Yt</span
+              ><span class="tag">Разработка</span>
+            </div>
+            <h3>YouTrack</h3>
+            <p class="tool-description">
+              Трекер задач от JetBrains с agile-досками, учётом времени и базой
+              знаний. Процессы можно адаптировать под команду.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Разработки и технической поддержки
+            </p>
+            <a
+              class="tool-link"
+              href="https://www.jetbrains.com/youtrack/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт YouTrack (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="tool-card" data-category="development">
+            <div class="card-top">
+              <span class="tool-icon github" aria-hidden="true">&lt;/&gt;</span
+              ><span class="tag">Разработка</span>
+            </div>
+            <h3>GitHub Projects</h3>
+            <p class="tool-description">
+              Планирование рядом с кодом. Issues и pull request в таблицах,
+              досках и дорожных картах без переключения между сервисами.
+            </p>
+            <p class="best-for">
+              <span>ПОДОЙДЁТ ДЛЯ</span>Команд, чей код уже живёт на GitHub
+            </p>
+            <a
+              class="tool-link"
+              href="https://github.com/features/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Перейти на сайт GitHub Projects (новая вкладка)"
+              >Узнать больше <span aria-hidden="true">↗</span></a
+            >
+          </article>
+        </div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>Пока ничего не нашлось</h3>
+          <p>Попробуйте другое название или категорию.</p>
+          <button id="reset-filters" type="button">Сбросить фильтры ↗</button>
+        </div>
+        <p class="catalog-note">
+          Это подборка, а не рейтинг. Возможности, тарифы и доступность
+          уточняйте на сайтах сервисов.
+          <span>Все ссылки открываются в новой вкладке ↗</span>
+        </p>
+      </section>
+      <section id="guide" class="guide wrap" aria-labelledby="guide-title">
+        <div class="guide-intro">
+          <p class="eyebrow">МАЛЕНЬКИЙ СОВЕТ</p>
+          <h2 id="guide-title">Начните с команды,<br />а не с инструмента.</h2>
+          <p>
+            Лучший трекер — тот, который помогает<br />работать, а не добавляет
+            работы.
+          </p>
+        </div>
+        <ol class="guide-steps">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Определите главное</h3>
+              <p>Спринты, простая доска или документы рядом с задачами?</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Попробуйте на одном проекте</h3>
+              <p>Перенесите несколько реальных задач и пригласите команду.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Оцените удобство вместе</h3>
+              <p>
+                Проверьте доступность, интеграции и условия перед переездом.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <a class="wordmark" href="#">вместо<span class="wordmark-dot">.</span></a>
+      <p>Инструменты меняются. Хорошая работа остаётся.</p>
+      <a
+        href="https://github.com/ruslankarelin2/alice-deepseek"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Исходный код <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+  </body>
+</html>

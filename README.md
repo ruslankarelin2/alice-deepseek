@@ -50,3 +50,17 @@
 - Руководство по разработке навыков для Алисы: https://yandex.ru/dev/dialogs/alice/doc/quickstart-about.html
 
 При создании использовались данные с проекта https://github.com/peleccom/chat_gpt_yandex_alice
+
+## Страница «Вместо Linear»
+
+В `docs/` находится независимый статический каталог восьми альтернатив Linear: с поиском, фильтрами по типу инструмента и ссылками на официальные сайты. Страница на русском, адаптирована для мобильных устройств и работает без сборки, внешних шрифтов и библиотек. Без JavaScript каталог и ссылки остаются доступны.
+
+Локальный просмотр:
+
+```bash
+python3 -m http.server 8080 --directory docs
+```
+
+Откройте http://localhost:8080. На существующем PHP-хостинге страница доступна по пути `/docs/`.
+
+Для публикации на GitHub Pages выберите **Settings → Pages → Build and deployment → Source → GitHub Actions** в настройках репозитория. После слияния изменений в `main` workflow `.github/workflows/pages.yml` опубликует только содержимое `docs/`. Его также можно запустить вручную через **Actions → Publish alternatives to Linear → Run workflow**. Адрес после успешной публикации: https://ruslankarelin2.github.io/alice-deepseek/.
